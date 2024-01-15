@@ -4,8 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Danubius Hotel Regents Park Quiz</title>
-  <style>
-    /* ... (unchanged) ... */
+ <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+    }
+
+    header {
+      text-align: center;
+      background-color: #00457C;
+      color: #FDCB5A;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    main {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1, h2, p {
+      color: #00457C;
+    }
+
+    button {
+      background-color: #00457C;
+      color: #FDCB5A;
+      padding: 10px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #002f4a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #00457C;
+      color: #FDCB5A;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -93,6 +145,8 @@
         <button onclick="resetGame()">Play Again</button>
       `;
     }
+
+   
     function resetGame() {
       currentQuestionIndex = 0;
       score = 0;
@@ -106,5 +160,3 @@
   </script>
 </body>
 </html>
-
-   
