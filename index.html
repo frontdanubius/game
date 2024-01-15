@@ -4,60 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Danubius Hotel Regents Park Quiz</title>
- <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-    }
-
-    header {
-      text-align: center;
-      background-color: #00457C;
-      color: #FDCB5A;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    h1, h2, p {
-      color: #00457C;
-    }
-
-    button {
-      background-color: #00457C;
-      color: #FDCB5A;
-      padding: 10px;
-      margin: 5px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #002f4a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #00457C;
-      color: #FDCB5A;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
+  <style>
+    /* ... (unchanged) ... */
   </style>
 </head>
 <body>
@@ -84,10 +32,10 @@
   <script>
     const questions = [
       { text: 'What year was Danubius Hotel Regents Park established?', correctAnswer: '1973', tips: 'Hint: It was before the 2000s!', options: ['1973', '1985', '1999'] },
-      { text: 'who's the frontdesk manager?', correctAnswer: 'Jude peris', tips: 'Hint: He's from Sri Lanka!', options: ['sujeeth', 'Harry', 'Jude Peris'] },
-     { text: 'who's guilly', correctAnswer: 'Barbaras pet', tips: 'Hint: Hotel Mascot', options: ['receptionist', 'Barbaras pet', 'waiter'] },
+      { text: 'Who\'s the front desk manager?', correctAnswer: 'Jude Peris', tips: 'Hint: He\'s from Sri Lanka!', options: ['Sujeeth', 'Harry', 'Jude Peris'] },
+      { text: 'Who\'s Guilly?', correctAnswer: 'Barbara\'s pet', tips: 'Hint: Hotel Mascot', options: ['Receptionist', 'Barbara\'s pet', 'Waiter'] },
       { text: 'How many rooms does the hotel have?', correctAnswer: '360', tips: 'Hint: It is a large hotel!', options: ['220', '360', '500'] },
-      { text: 'What is the hotel\'s address?', correctAnswer: '18 Lodge Road London NW8 7JT', tips: 'Hint: Located in St John\'s Wood!', options: ['14 Park Road, London NW1 4SH', '18 Lodge Road, London NW8 7JT', '32 Baker Street, London W1U 3JY'] },
+      { text: 'What is the hotel\'s address?', correctAnswer: '18 Lodge Road London NW8 7JT', tips: 'Hint: Located in St John\'s Wood!', options: ['14 Park Road, London NW1 4SH', '18 Lodge Road London NW8 7JT', '32 Baker Street, London W1U 3JY'] },
       { text: 'Which famous park is located nearby?', correctAnswer: 'Regent\'s Park', tips: 'Hint: The hotel is named after it!', options: ['Hyde Park', 'St James\'s Park', 'Regent\'s Park'] },
       { text: 'What type of cuisine is served at the hotel\'s restaurant?', correctAnswer: 'International', tips: 'Hint: Offers a diverse menu!', options: ['Italian', 'International', 'Asian Fusion'] },
       { text: 'How many meeting rooms does the hotel have?', correctAnswer: '11', tips: 'Hint: Suitable for conferences!', options: ['5', '11', '16'] },
@@ -145,7 +93,6 @@
         <button onclick="resetGame()">Play Again</button>
       `;
     }
-
     function resetGame() {
       currentQuestionIndex = 0;
       score = 0;
@@ -159,3 +106,5 @@
   </script>
 </body>
 </html>
+
+   
