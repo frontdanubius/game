@@ -9,25 +9,31 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
-            color: #333;
+            background-image: url('https://resources.ecb.co.uk/photo-resources/2023/07/04/641e2be5-3482-4e4f-bee2-43406331608e/1503447881.jpg?width=1868&height=1136');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
         }
 
         header, section, footer {
             margin: 20px;
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         h1, h2, h3 {
-            color: #004b8d; /* Lords Cricket Ground blue color */
+            color: #333;
         }
 
         img {
             max-width: 100%;
             height: auto;
+        }
+
+        #matches-container {
+            text-align: left;
         }
 
         footer {
@@ -45,105 +51,50 @@
     </header>
 
     <section id="matches">
-        <h2 style="text-align: center;">Upcoming Matches</h2>
-        <div id="matches-container" style="text-align: center;">
+        <h2>Upcoming Matches</h2>
+        <div id="matches-container">
             <!-- Matches will be dynamically added here using JavaScript -->
         </div>
     </section>
 
-    <section id="premium-seating">
-        <h2>Premium Seating and Hospitality</h2>
-        <p>Explore premium seating options and hospitality packages at Lords Cricket Ground.</p>
-        <a href="https://www.lords.org/lords/match-day/premium-seating/hospitality" target="_blank">
-            <img src="https://example.com/path/to/premium-seating-image.jpg" alt="Premium Seating">
-        </a>
-    </section>
-
-    <section id="fixtures-results">
-        <h2>Fixtures and Results</h2>
-        <div id="fixtures-results-container">
-            <!-- Fixture and result details will be dynamically added here using JavaScript -->
-        </div>
-    </section>
-
-    <section id="ecb-news">
-        <h2>ECB News</h2>
-        <p>Stay updated with the latest news about cricket from ECB.</p>
-        <a href="https://www.ecb.co.uk/news/3567009" target="_blank">
-            <img src="https://example.com/path/to/ecb-news-image.jpg" alt="ECB News">
-        </a>
-    </section>
-
-    <section id="england-fixtures">
-        <h2>England Men's 2024 Fixtures</h2>
-        <p>England Men will play six Test Matches, seven IT20s, and five ODIs in 2024.</p>
-
-        <h3>Men’s IT20 Series v Pakistan Men</h3>
-        <p>22 May: 1st Men’s IT20 – Headingley, Leeds</p>
-        <p>25 May: 2nd Men’s IT20 – Edgbaston, Birmingham</p>
-        <p>28 May: 3rd Men’s IT20 – Sophia Gardens, Cardiff</p>
-        <p>30 May: 4th Men’s IT20 – The Kia Oval</p>
-
-        <h3>Men’s Test Series v West Indies Men</h3>
-        <p>10-14 July: 1st Men’s Test – Lord’s, London</p>
-        <p>18-22 July: 2nd Men’s Test – Trent Bridge, Nottingham</p>
-        <p>26-30 July: 3rd Men’s Test – Edgbaston, Birmingham</p>
-
-        <h3>Men’s Test Series v Sri Lanka Men</h3>
-        <p>21-25 Aug: 1st Men’s Test – Emirates Old Trafford, Manchester</p>
-        <p>29 Aug – 2 Sept: 2nd Men’s Test – Lord’s, London</p>
-        <p>6-10 Sept: 3rd Men’s Test – The Kia Oval</p>
-
-        <h3>Men’s IT20 Series v Australia Men</h3>
-        <p>11 Sept: 1st Men’s IT20 – The Ageas Bowl, Southampton</p>
-        <p>13 Sept: 2nd Men’s IT20 – Sophia Gardens, Cardiff</p>
-        <p>15 Sept: 3rd Men’s IT20 – Emirates Old Trafford, Manchester</p>
-
-        <h3>Men’s One-Day International Series v Australia Men</h3>
-        <p>19 Sept: 1st Men’s One-Day International – Trent Bridge, Nottingham</p>
-        <p>21 Sept: 2nd Men’s One-Day International - Headingley, Leeds</p>
-        <p>24 Sept: 3rd Men’s One-Day International – Seat Unique Riverside, Chester-le-Street</p>
-        <p>27 Sept: 4th Men’s One-Day International – Lord’s, London</p>
-        <p>29 Sept: 5th Men’s One-Day International – Seat Unique Stadium, Bristol</p>
-
-        <h3>Available Tickets</h3>
-        <p>WEDNESDAY 22 MAY 2024 - England v Pakistan 2024 – 1st T20I Headingley</p>
-        <p>Headingley, St Michael's Ln, Headingley, Leeds LS6 3BU</p>
-
-        <!-- Add more ticket details as needed -->
-    </section>
-
     <footer>
         <p>&copy; 2024 Diego. All rights reserved.</p>
-        <p>Visit: <a href="https://tickets.lords.org/" target="_blank">Lords Tickets</a> | <a href="https://www.lords.org/lords/news-stories/lord-s-public-ticket-ballot-2024" target="_blank">Lords News</a> | Cricket Places</p>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            fetchECBMatchData();
+            fetchMatchesData();
         });
 
-        function fetchECBMatchData() {
-            const ecbLink = 'https://www.ecb.co.uk/news/3567009';
+        function fetchMatchesData() {
+            const matchesData = [
+                { date: '10 JUL 2024', day: 'Wed', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '11 JUL 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '12 JUL 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground', availability: 'Moderate Availability' },
+                { date: '13 JUL 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '17 JUL 2024', day: 'Wed', time: '18:00', teams: 'ENGLAND WOMEN V NEW ZEALAND WOMEN - T20I', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '29 AUG 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '30 AUG 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '31 AUG 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '1 SEP 2024', day: 'Sun', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '27 SEP 2024', day: 'Fri', time: '12:30', teams: 'ENGLAND MEN V AUSTRALIA MEN - ODI', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' }
+            ];
 
-            fetch(ecbLink)
-                .then(response => response.text())
-                .then(html => {
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(html, 'text/html');
+            const matchesContainer = document.getElementById('matches-container');
 
-                    const matchElements = doc.querySelectorAll('.match-container');
-                    const matchesContainer = document.getElementById('matches-container');
-
-                    matchElements.forEach(matchElement => {
-                        const matchDiv = document.createElement('div');
-                        matchDiv.innerHTML = matchElement.innerHTML;
-                        matchesContainer.appendChild(matchDiv);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching match data:', error);
-                });
+            matchesData.forEach(match => {
+                const matchDiv = document.createElement('div');
+                matchDiv.innerHTML = `
+                    <p>Date: ${match.date}</p>
+                    <p>Day: ${match.day}</p>
+                    <p>Time: ${match.time}</p>
+                    <p>Teams: ${match.teams}</p>
+                    <p>Venue: ${match.venue}</p>
+                    <p>Availability: ${match.availability}</p>
+                    <hr>
+                `;
+                matchesContainer.appendChild(matchDiv);
+            });
         }
     </script>
 </body>
