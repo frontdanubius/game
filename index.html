@@ -35,15 +35,27 @@
 
         #matches-container {
             text-align: left;
-            color: #999; /* Light grey text color */
-            font-weight: bold; /* Bold font */
-            font-size: 16px; /* Increased font size */
+            color: #333; /* Dark text color */
         }
 
         footer {
             margin-top: 40px;
             text-align: center;
             color: #ccc; /* Lighter text color */
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -63,6 +75,7 @@
 
     <footer>
         <p>&copy; 2024 Diego. All rights reserved.</p>
+        <button onclick="printPage()">Print</button>
     </footer>
 
     <script>
@@ -72,16 +85,16 @@
 
         function fetchMatchesData() {
             const matchesData = [
-                { date: '10 JUL 2024', day: 'Wed', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '11 JUL 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '12 JUL 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '13 JUL 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '17 JUL 2024', day: 'Wed', time: '18:00', teams: 'ENGLAND WOMEN V NEW ZEALAND WOMEN - T20I', venue: 'Lord\'s Cricket Ground' },
-                { date: '29 AUG 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '30 AUG 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '31 AUG 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '1 SEP 2024', day: 'Sun', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground' },
-                { date: '27 SEP 2024', day: 'Fri', time: '12:30', teams: 'ENGLAND MEN V AUSTRALIA MEN - ODI', venue: 'Lord\'s Cricket Ground' }
+                { date: '10 JUL 2024', day: 'Wed', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '11 JUL 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '12 JUL 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground', availability: 'Moderate Availability' },
+                { date: '13 JUL 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '17 JUL 2024', day: 'Wed', time: '18:00', teams: 'ENGLAND WOMEN V NEW ZEALAND WOMEN - T20I', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '29 AUG 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '30 AUG 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '31 AUG 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '1 SEP 2024', day: 'Sun', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
+                { date: '27 SEP 2024', day: 'Fri', time: '12:30', teams: 'ENGLAND MEN V AUSTRALIA MEN - ODI', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' }
             ];
 
             const matchesContainer = document.getElementById('matches-container');
@@ -98,6 +111,10 @@
                 `;
                 matchesContainer.appendChild(matchDiv);
             });
+        }
+
+        function printPage() {
+            window.print();
         }
     </script>
 </body>
