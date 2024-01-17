@@ -1,161 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Danubius Hotel Regents Park Quiz</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lords Cricket Ground 2024</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
 
-    header {
-      text-align: center;
-      background-color: #00457C;
-      color: #FDCB5A;
-      padding: 1rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
+        header, section, footer {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-    main {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
+        h1, h2 {
+            color: #333;
+        }
 
-    h1, h2, p {
-      color: #00457C;
-    }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
 
-    button {
-      background-color: #00457C;
-      color: #FDCB5A;
-      padding: 10px;
-      margin: 5px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    button:hover {
-      background-color: #002f4a;
-    }
-
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #00457C;
-      color: #FDCB5A;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-  </style>
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Danubius Hotel Regents Park Quiz</h1>
-  </header>
 
-  <main>
-    <h2 id="question">Question 1</h2>
-    <p id="question-text">What year was Danubius Hotel Regents Park established?</p>
-    <div id="options">
-      <!-- Options are dynamically added here -->
-    </div>
-    <p id="tips" style="color: #8B0000;"></p>
-    <p id="score">Score: 0</p>
-  </main>
+    <header>
+        <h1>Welcome to Lords Cricket Ground 2024</h1>
+        <p>Guest Information for Danubius Regents Park Hotel</p>
+    </header>
 
-  <footer>
-    &copy; 2024 Diego
-  </footer>
+    <section id="matches">
+        <h2>Upcoming Matches</h2>
+        <div id="matches-container">
+            <!-- Matches will be dynamically added here using JavaScript -->
+        </div>
+    </section>
 
-  <script>
-    const questions = [
-      { text: 'What year was Danubius Hotel Regents Park established?', correctAnswer: '1973', tips: 'Hint: It was before the 2000s!', options: ['1973', '1985', '1999'] },
-      { text: 'Who\'s the front desk manager?', correctAnswer: 'Jude Peris', tips: 'Hint: He\'s from Sri Lanka!', options: ['Sujeeth', 'Harry', 'Jude Peris'] },
-      { text: 'Who\'s Guilly?', correctAnswer: 'Barbara\'s pet', tips: 'Hint: Hotel Mascot', options: ['Receptionist', 'Barbara\'s pet', 'Waiter'] },
-      { text: 'How many rooms does the hotel have?', correctAnswer: '360', tips: 'Hint: It is a large hotel!', options: ['220', '360', '500'] },
-      { text: 'who\'s staying at 204?', correctAnswer: 'clementine', tips: 'Hint: It is a large hotel!', options: ['clementine', 'crompton', 'theo'] },
-      { text: 'What is the hotel\'s address?', correctAnswer: '18 Lodge Road London NW8 7JT', tips: 'Hint: Located in St John\'s Wood!', options: ['14 Park Road, London NW1 4SH', '18 Lodge Road London NW8 7JT', '32 Baker Street, London W1U 3JY'] },
-      { text: 'Which famous park is located nearby?', correctAnswer: 'Regent\'s Park', tips: 'Hint: The hotel is named after it!', options: ['Hyde Park', 'St James\'s Park', 'Regent\'s Park'] },
-      { text: 'What type of cuisine is served at the hotel\'s restaurant?', correctAnswer: 'International', tips: 'Hint: Offers a diverse menu!', options: ['Italian', 'International', 'Asian Fusion'] },
-      { text: 'How many meeting rooms does the hotel have?', correctAnswer: '11', tips: 'Hint: Suitable for conferences!', options: ['5', '11', '16'] },
-      { text: 'What is the name of the hotel\'s spa?', correctAnswer: 'Pavilion Spa', tips: 'Hint: Offers relaxing treatments!', options: ['Danubius Wellness', 'Pavilion Spa', 'Regents Retreat'] },
-      { text: 'In which year did the hotel undergo a major refurbishment?', correctAnswer: '2019', tips: 'Hint: Recent renovations!', options: ['2015', '2019', '2023'] },
-      { text: 'Which London landmark is closest to the hotel?', correctAnswer: 'Lord\'s Cricket Ground', tips: 'Hint: Famous Sports Venue', options: ['The Shard', 'Lord\'s Cricket Ground', 'Tower Bridge'] },
-      { text: 'What is the hotel\'s official website?', correctAnswer: 'https://www.danubiushotels.com/en/our-hotels-london/danubius-hotel-regents-park', tips: 'Hint: Visit for more information!', options: ['https://www.danubiusregentspark.com', 'https://www.londonhotels.com', 'https://www.danubiushotels.com/en/our-hotels-london/danubius-hotel-regents-park'] },
-      { text: 'Which underground station is closest to the hotel?', correctAnswer: 'St. John\'s Wood', tips: 'Hint: A convenient transport link!', options: ['Baker Street', 'St. John\'s Wood', 'Regent\'s Park'] },
-      { text: 'What is the hotel\'s cancellation policy?', correctAnswer: 'Varies based on the type of booking', tips: 'Hint: Check the terms before booking!', options: ['Free cancellation up to 24 hours', 'Varies based on the type of booking', 'Non-refundable'] },
-    ];
+    <section id="premium-seating">
+        <h2>Premium Seating and Hospitality</h2>
+        <p>Explore premium seating options and hospitality packages at Lords Cricket Ground.</p>
+        <a href="https://www.lords.org/lords/match-day/premium-seating/hospitality" target="_blank">
+            <img src="https://example.com/path/to/premium-seating-image.jpg" alt="Premium Seating">
+        </a>
+    </section>
 
-    let currentQuestionIndex = 0;
-    let score = 0;
+    <section id="fixtures-results">
+        <h2>Fixtures and Results</h2>
+        <div id="fixtures-results-container">
+            <!-- Fixture and result details will be dynamically added here using JavaScript -->
+        </div>
+    </section>
 
- function checkAnswer(selectedOption) {
-  const currentQuestion = questions[currentQuestionIndex];
-  const correctAnswer = currentQuestion.correctAnswer.toLowerCase();
+    <section id="ecb-news">
+        <h2>ECB News</h2>
+        <p>Stay updated with the latest news about cricket from ECB.</p>
+        <a href="https://www.ecb.co.uk/news/3567009" target="_blank">
+            <img src="https://example.com/path/to/ecb-news-image.jpg" alt="ECB News">
+        </a>
+    </section>
 
-  if (selectedOption.toLowerCase() === correctAnswer) {
-    score++;
-  }
+    <footer>
+        <p>&copy; 2024 Lords Cricket Ground. All rights reserved.</p>
+    </footer>
 
-  if (currentQuestionIndex < questions.length - 1) {
-    currentQuestionIndex++;
-    showQuestion();
-  } else {
-    gameOver();
-  }
-}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchECBMatchData();
+        });
 
+        function fetchECBMatchData() {
+            const ecbLink = 'https://www.ecb.co.uk/news/3567009';
 
-    function showQuestion() {
-      const currentQuestion = questions[currentQuestionIndex];
-      const questionElement = document.getElementById('question');
-      const questionTextElement = document.getElementById('question-text');
-      const optionsElement = document.getElementById('options');
-      const tipsElement = document.getElementById('tips');
-      const scoreElement = document.getElementById('score');
+            fetch(ecbLink)
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
 
-      questionElement.textContent = `Question ${currentQuestionIndex + 1}`;
-      questionTextElement.textContent = currentQuestion.text;
-      optionsElement.innerHTML = renderOptions(currentQuestion.options);
-      tipsElement.textContent = `Tips: ${currentQuestion.tips}`;
-      scoreElement.textContent = `Score: ${score}`;
-    }
+                    const matchElements = doc.querySelectorAll('.match-container');
+                    const matchesContainer = document.getElementById('matches-container');
 
-    function renderOptions(options) {
-      return options.map(option => `<button onclick="checkAnswer('${option}')">${option}</button>`).join('');
-    }
-
-    function gameOver() {
-      const mainElement = document.querySelector('main');
-      mainElement.innerHTML = `
-        <h1>Game Over</h1>
-        <p>Your Score: ${score}</p>
-        <button onclick="resetGame()">Play Again</button>
-      `;
-    }
-
-    function resetGame() {
-      currentQuestionIndex = 0;
-      score = 0;
-      showQuestion();
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-      showQuestion();
-    });
-  </script>
+                    matchElements.forEach(matchElement => {
+                        const matchDiv = document.createElement('div');
+                        matchDiv.innerHTML = matchElement.innerHTML;
+                        matchesContainer.appendChild(matchDiv);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error fetching match data:', error);
+                });
+        }
+    </script>
 </body>
 </html>
-
