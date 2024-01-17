@@ -35,7 +35,9 @@
 
         #matches-container {
             text-align: left;
-            color: #333; /* Dark text color */
+            color: #999; /* Light grey text color */
+            font-weight: bold; /* Bold font */
+            font-size: 16px; /* Increased font size */
         }
 
         footer {
@@ -70,16 +72,16 @@
 
         function fetchMatchesData() {
             const matchesData = [
-                { date: '10 JUL 2024', day: 'Wed', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '11 JUL 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '12 JUL 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground', availability: 'Moderate Availability' },
-                { date: '13 JUL 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '17 JUL 2024', day: 'Wed', time: '18:00', teams: 'ENGLAND WOMEN V NEW ZEALAND WOMEN - T20I', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '29 AUG 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '30 AUG 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '31 AUG 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '1 SEP 2024', day: 'Sun', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' },
-                { date: '27 SEP 2024', day: 'Fri', time: '12:30', teams: 'ENGLAND MEN V AUSTRALIA MEN - ODI', venue: 'Lord\'s Cricket Ground', availability: 'Good Availability' }
+                { date: '10 JUL 2024', day: 'Wed', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '11 JUL 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '12 JUL 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '13 JUL 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V WEST INDIES MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '17 JUL 2024', day: 'Wed', time: '18:00', teams: 'ENGLAND WOMEN V NEW ZEALAND WOMEN - T20I', venue: 'Lord\'s Cricket Ground' },
+                { date: '29 AUG 2024', day: 'Thu', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FIRST DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '30 AUG 2024', day: 'Fri', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - SECOND DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '31 AUG 2024', day: 'Sat', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - THIRD DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '1 SEP 2024', day: 'Sun', time: '11:00', teams: 'ENGLAND MEN V SRI LANKA MEN - FOURTH DAY', venue: 'Lord\'s Cricket Ground' },
+                { date: '27 SEP 2024', day: 'Fri', time: '12:30', teams: 'ENGLAND MEN V AUSTRALIA MEN - ODI', venue: 'Lord\'s Cricket Ground' }
             ];
 
             const matchesContainer = document.getElementById('matches-container');
@@ -92,7 +94,6 @@
                     <p>Time: ${match.time}</p>
                     <p>Teams: ${match.teams}</p>
                     <p>Venue: ${match.venue}</p>
-                    <p>Availability: ${match.availability}</p>
                     <hr>
                 `;
                 matchesContainer.appendChild(matchDiv);
